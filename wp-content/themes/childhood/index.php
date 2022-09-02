@@ -506,3 +506,13 @@
 <?php
     get_footer();
 ?>
+
+<?php
+    function print_hello() {
+        echo 'Hello World';
+    }
+
+    add_action('my_hook', 'print_hello');
+
+    do_action('my_hook');
+?>
