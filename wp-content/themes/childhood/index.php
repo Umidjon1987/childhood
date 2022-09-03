@@ -503,16 +503,21 @@
                 </div>
             </div>
         </div>
+
 <?php
-    get_footer();
+    function my_filter_function($str) {
+        return 'Hello ' . $str . '<br>';
+    };
+
+    add_filter('my_filter','my_filter_function', 15 );
+
+    echo apply_filters('my_filter', 'World' );
+
+    remove_filter('my_filter', 'my_filter_function', 15 );
+
+    echo apply_filters('my_filter', 'World' );
 ?>
 
 <?php
-    function print_hello() {
-        echo 'Hello World';
-    }
-
-    add_action('my_hook', 'print_hello');
-
-    do_action('my_hook');
+    get_footer();
 ?>

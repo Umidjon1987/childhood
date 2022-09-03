@@ -6,5 +6,4 @@
         wp_enqueue_script('childhood-scripts', get_template_directory_uri( ) . '/assets/js/main.min.js' , array(), null, true );
         
     };
-
 ?>
