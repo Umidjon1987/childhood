@@ -1,4 +1,11 @@
 <?php
+/*
+Template Name: Мой шаблон для развивающих грушек
+Template Post Type: post, edu_toys
+*/
+?>
+
+<?php
     get_header();
 ?>
 
@@ -20,12 +27,12 @@
 </div>
 
 <div class="container toys">
-    <h2 class="subtitle">Возможно вам понравится</h2>
+    <h2 class="subtitle">Новые товары:</h2>
     <div class="toys__wrapper">
         <?php 
             $my_posts = get_posts( array(
                 'numberposts' => 3,
-                'category_name'    => 'soft_toys',
+                'category_name'    => 'edu_toys',
                 'orderby'     => 'date',
                 'order'       => 'ASC',
                 'post_type'   => 'post',
